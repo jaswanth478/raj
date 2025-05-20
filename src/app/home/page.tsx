@@ -61,7 +61,7 @@ export default function HomePage() {
 
   const getTrailerUrl = async (title: string): Promise<string> => {
     try {
-      const apiKey = "AIzaSyAvsIJQ8-AvVQG7_fTuoUvryZVUC5ydqag";  // Ensure your API key is valid and secured
+      const apiKey =  process.env.YOUTUBE_API;  // Ensure your API key is valid and secured
       const query = encodeURIComponent(`${title} trailer`);
       const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&maxResults=1&key=${apiKey}`;
 
