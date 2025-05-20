@@ -1,0 +1,1 @@
+// Remove this file. All NextAuth config is in route.t
